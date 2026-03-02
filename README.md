@@ -7,4 +7,4 @@
 - 😄 Pronouns: ... he
 - ⚡ Fun fact: ... im am a self taught coder but lenaring to be a full stack dev :)
 
-right now im lising to [![Spotify](https://spotify-github-readme.vercel.app)]([/user/3r8i7k4at5hktz8uaolnz5mb9](https://open.spotify.com))
+right now im lising to [Spotify](https://spotify-github-readme.vercel.app)]([/user/3r8i7k4at5hktz8uaolnz5mb9](https://open.spotify.com))
