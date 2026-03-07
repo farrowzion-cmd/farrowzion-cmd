@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TERMINAL_ACCESS</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00FF00;
+            font-family: "Courier New", Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        #terminal {
+            flex-grow: 1;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-y: auto;
+        }
+        #cursor {
+            display: inline-block;
+            width: 10px;
+            height: 18px;
+            background-color: #00FF00;
+            animation: blink 0.8s infinite;
+            vertical-align: middle;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal">--- INITIALIZING SYSTEM BYPASS ---
+> ROOT ACCESS GRANTED...
+> BYPASSING FIREWALL...
+> CONNECTING TO SERVER...
+> ENCRYPTING PACKETS...
+> INFILTRATING DATABASE...
+</div>
+    <div><span id="cursor"></span></div>
+
+    <script>
+        const terminal = document.getElementById('terminal');
+        
+        // Random code snippets that appear when you type
+        const fakeCode = [
+            "  int main() { printf(\"ACCESS GRANTED\\n\"); }",
+            "  void decrypt(char* data) { while(*data) *data++ ^= 0x55; }",
+            "  for(int i=0; i<1024; i++) { ping_server(i); }",
+            "  if (security == 0) { dump_database(); }",
+            "  sudo rm -rf /cache/logs --force",
+            "  TCP_STREAM_OPEN: 0.0.0.0:8080",
+            "  DECRYPTING RSA-4096 BIT KEY...",
+            "  OVERRIDING SECURITY PROTOCOL 7..."
+        ];
+
+        document.addEventListener('keydown', () => {
+            const randomLine = fakeCode[Math.floor(Math.random() * fakeCode.length)];
+            const p = document.createElement('div');
+            p.textContent = "> " + randomLine;
+            terminal.appendChild(p);
+            
+            // Auto-scroll to stay at the bottom
+            terminal.scrollTop = terminal.scrollHeight;
+        });
+    </script>
+</body>
+</html>
